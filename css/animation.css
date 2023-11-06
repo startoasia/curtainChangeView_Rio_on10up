@@ -1,0 +1,246 @@
+.scale {
+    animation: scale 2s infinite ease-in-out;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.1, 1.1);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.scalehadle {
+    animation: scalehadle 2s infinite ease-in-out;
+}
+
+@keyframes scalehadle {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.2, 1.2);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.moveDown {
+    animation: moveDown 2s infinite ease-in-out;
+}
+
+@keyframes moveDown {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.showControl {
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.showControl--active {
+    opacity: 1;
+}
+
+.skyBtn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.showScroll {
+    transition: all 0.8s;
+}
+
+.thing5-5showScroll--active {
+    top: -16%;
+}
+
+.thing6-6showScroll--active {
+    top: -8%;
+}
+
+.thing7-6showScroll--active {
+    top: 11.2%;
+}
+
+/* 跑馬燈 */
+
+.marqueeGiftControl {
+    overflow: hidden;
+    display: flex;
+
+}
+
+.marqueeGiftControl2 {
+    overflow: hidden;
+    /* display: flex; */
+
+}
+
+.marqueeGift {
+    margin: 0 -1px;
+    animation: marqueeGift 12s linear infinite;
+}
+
+.marqueeGiftslow {
+
+    animation: marqueeGift2 20s linear infinite;
+}
+
+.marqueeGiftslow2 {
+    position: absolute;
+    left: 0%;
+    top: 0;
+    transform: translateX(65%);
+    animation: marqueeGift2 20s 10s linear infinite;
+}
+
+
+/* 跑馬燈 天空 */
+
+
+.marqueeSkyControl {
+    overflow: hidden;
+    display: flex;
+
+}
+
+.marqueeSky {
+    margin: 0 -1px;
+    animation: marqueeGift 18s linear infinite;
+}
+
+@keyframes marqueeGift {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes marqueeGift2 {
+    0% {
+        transform: translateX(65%);
+    }
+
+    100% {
+        transform: translateX(-135%);
+    }
+}
+
+
+/* 按鈕動畫 */
+@keyframes hoverAnim {
+    0% {
+        -webkit-transform: translate(-100%, 0);
+        transform: translate(-100%, 0);
+    }
+
+    30% {
+        -webkit-transform: translate(100%, 0);
+        transform: translate(100%, 0);
+    }
+
+    100% {
+        -webkit-transform: translate(100%, 0);
+        transform: translate(100%, 0);
+    }
+}
+
+.Link {
+    transition: 0.8s;
+}
+
+.Link span {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.Link span:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(124deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 40%, rgba(255, 255, 255, 0.75) 50%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0) 100%);
+    -webkit-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+    pointer-events: none;
+    animation-name: hoverAnim;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@media screen and (max-width: 640px) {
+    .Link span:after {
+        animation-duration: 4s;
+    }
+}
+
+/* FV */
+
+.zoomIn {
+    transform-origin: bottom center;
+    animation: zoomIn .75s ease-in-out;
+    opacity: 1;
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0, 0);
+    }
+
+    70% {
+        opacity: 1;
+        transform: scale(1.05, 1.05);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+.rollIn {
+    animation: rollIn .75s ease-in-out;
+    opacity: 1;
+}
+
+@keyframes rollIn {
+    0% {
+        opacity: 0;
+        transform: translate3d(-100%, 0, 0) rotate(-120deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+}
